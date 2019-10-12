@@ -3,7 +3,8 @@ import {
   ONE_ATM,
   SLOPE,
   INTERCEPT,
-  BUHLMANN_ZHL16_B
+  BUHLMANN_ZHL16_B,
+  EAN21
 } from './constants'
 
 import round from './round'
@@ -18,9 +19,12 @@ export function partialPercentageOxygen(depth: Metre, fo2: FO2): PPO2 {
 }
 
 export function equivalentAirDepth(depth: Metre, fo2: FO2): Metre {
-  const fn2Air = 0.79
-  const fn2 = 1 - fo2
-  const result = (fn2 * (depth + 10)) / fn2Air - 10
+  const result = ((1 - fo2) * (depth + 10)) / (1 - EAN21) - 10
+  return round(result, 1)
+}
+
+export function actualDepth(equivalentAirDepth: Metre, fo2: FO2) {
+  const result = ((1 - EAN21) * (equivalentAirDepth + 10)) / (1 - fo2) - 10
   return round(result, 1)
 }
 

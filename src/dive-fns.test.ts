@@ -13,6 +13,11 @@ describe('df', () => {
     expect(df.equivalentAirDepth(30.5, 0.32)).toEqual(24.9)
   })
 
+  it('should calculate actual depth for equivalent air depth and fo2', () => {
+    expect(df.actualDepth(20, 0.36)).toEqual(27)
+    expect(df.actualDepth(24.9, 0.32)).toEqual(30.5)
+  })
+
   it('should calculate surface air consumption for used air, average depth, and time at depth', () => {
     expect(df.surfaceAirConsumption(40, 10, 10)).toEqual(2)
     expect(df.surfaceAirConsumption(140, 20, 20)).toEqual(2.33)
