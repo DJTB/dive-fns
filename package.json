@@ -12,11 +12,11 @@
   "author": "Duncan Bay <duncan.bay@gmail.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:DJTB/dive-fns.git"
   },
   "license": "MIT",
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=10.0.0"
   },
   "scripts": {
     "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
