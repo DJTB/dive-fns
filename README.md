@@ -5,7 +5,7 @@ All return types are numbers.
 Currently only configured for saltwater.
 
 ```ts
-import { absolutePressureAtDepth, /* etc */ } from 'dive-fns;
+import { absolutePressureAtDepth, /* etc */ } from 'dive-fns';
 
 absolutePressureAtDepth(depth: Metre): ATA
 
