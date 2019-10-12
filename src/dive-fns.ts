@@ -23,7 +23,7 @@ export function equivalentAirDepth(depth: Metre, fo2: FO2): Metre {
   return round(result, 1)
 }
 
-export function actualDepth(equivalentAirDepth: Metre, fo2: FO2) {
+export function actualDepth(equivalentAirDepth: Metre, fo2: FO2): Metre {
   const result = ((1 - EAN21) * (equivalentAirDepth + 10)) / (1 - fo2) - 10
   return round(result, 1)
 }

@@ -17,6 +17,8 @@ centralNervousSystemOxygenToxicity(actualBottomTime: Minute, ppo2: PPO2): CNS
 
 equivalentAirDepth(depth: Metre, fo2: FO2): Metre
 
+actualDepth(equivalentAirDepth: Metre, fo2: FO2): Metre
+
 maximumOperatingDepth(ppo2: PPO2, fo2: FO2): Metre
 
 noDecompressionLimit(depth: Metre, ppo2: PPO2): Minute
